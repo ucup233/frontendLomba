@@ -1,3 +1,17 @@
+export type Umkm = {
+  id: string;
+  name: string;
+  description: string;
+  category: string;
+  rating: number;
+  reviews: number;
+  address: string;
+  image: string;
+  gallery: string[];
+  hours: string;
+  coords?: { lat: number; lng: number }; 
+};
+
 export const umkmData = [
   {
     id: "1",
@@ -13,6 +27,7 @@ export const umkmData = [
               "/Foto kedai aduhai 2.jpg",
               "/Foto kedai aduhai 3.jpg",
     ],
+    coords: {lat: -7.8146301374773115, lng: 110.32088289722063}
               
   },
   {
@@ -28,6 +43,7 @@ export const umkmData = [
     gallery: ["/Foto celular 1.jpg", 
               "/Foto celular 2.jpg",
             ],
+    coords: {lat: -7.806806366691774, lng: 110.32273246838965}
   },
   {
     id: "3",
@@ -43,6 +59,7 @@ export const umkmData = [
               "/Foto laundry 2.jpg", 
               "/Foto laundry 3.jpg",
             ],
+    coords: {lat: -7.817299097018003, lng: 110.32157260876296}
   },
   {
     id: "4",
@@ -58,6 +75,7 @@ export const umkmData = [
               "/Foto warteg 2.jpg", 
               "/Foto warteg 3.jpg",
             ],
+    coords: {lat:  -7.814266131812539, lng: 110.32303811976293}
   },
   {
     id: "5",
@@ -73,6 +91,7 @@ export const umkmData = [
               "/Foto sate taichan 2.jpg", 
               "/Foto sate taichan 3.jpg",
             ],
+    coords: {lat:  -7.8119520916168, lng: 110.31714540692089}
   },
   {
     id: "6",
@@ -88,6 +107,7 @@ export const umkmData = [
               "/Foto cafe dingo 2.jpg",
               "/Foto cafe dingo 3.jpg",
             ],
+    coords: {lat:  -7.808217388200129, lng: 110.32453323904062}
   },
   {
     id: "7",
@@ -103,6 +123,7 @@ export const umkmData = [
               "/Foto karib cafe 2.jpg",
               "/Foto karib cafe 3.jpg",
             ],
+    coords: {lat:  -7.805838746383035, lng: 110.31807865247504}
   },
   {
     id: "8",
@@ -118,6 +139,7 @@ export const umkmData = [
               "/Foto koat kopi 2.jpg",
               "/Foto koat kopi 3.jpg",
             ],
+    coords: {lat: -7.815872800735719, lng: 110.32717670491901}
   },
   {
     id: "9",
@@ -133,6 +155,7 @@ export const umkmData = [
               "/Foto barbershop 2.jpg",
               "/Foto barbershop 3.jpg",
             ],
+    coords: {lat: -7.813226361734934, lng: 110.32808940964973}
   },
   {
     id: "10",
@@ -149,5 +172,6 @@ export const umkmData = [
       "/Foto sembako 2.jpg",
       "/Foto sembako 3.jpg",
     ],
+    coords: {lat: -7.813613128174531, lng: 110.31713553735756}
   },
 ]
