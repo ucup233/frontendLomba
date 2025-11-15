@@ -1,18 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+//import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Navigation } from "@/components/navigation";
+import { Roboto } from 'next/font/google'
 import { SearchProvider } from "./search-context"
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const roboto = Roboto({ weight: ['400', '500', '700'], subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Direktori UMKM",
@@ -30,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className="bg-black text-white antialiased" style={{ fontFamily: roboto.style.fontFamily }}
       >
         <SearchProvider>
         <Navigation/>
