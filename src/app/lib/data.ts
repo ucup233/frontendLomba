@@ -175,3 +175,4 @@ export const umkmData = [
     coords: {lat: -7.813613128174531, lng: 110.31713553735756}
   },
 ]
+

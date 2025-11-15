@@ -1,16 +1,20 @@
-"use client";
-import { Search } from "lucide-react";
-import { useState } from "react";
-import Link from "next/link";
+"use client"
+import { Search } from 'lucide-react'
+import { useSearch } from "@/app/search-context"
+import Link from "next/link"
 
 export function Navigation() {
-  const [searchQuery, setSearchQuery] = useState("");
+  const { searchQuery, setSearchQuery } = useSearch()
 
   return (
-    <nav className="sticky top-0 z-50 border-b" style={{ backgroundColor: "#0a0a0a", borderColor: "rgba(0, 255, 65, 0.2)" }}>
+    <nav
+      className="sticky top-0 z-50 border-b"
+      style={{ backgroundColor: "#0a0a0a", borderColor: "rgba(0, 255, 65, 0.2)" }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo with Next.js Link */}
+
+          {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <div
               className="w-10 h-10 rounded-lg flex items-center justify-center group-hover:shadow-lg transition-smooth"
@@ -41,7 +45,10 @@ export function Navigation() {
           {/* Search Bar */}
           <div className="hidden md:flex items-center flex-1 max-w-md mx-8">
             <div className="relative w-full group">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5" style={{ color: "#00FF41" }} />
+              <Search
+                className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5"
+                style={{ color: "#00FF41" }}
+              />
               <input
                 type="text"
                 placeholder="Cari UMKM..."
@@ -55,12 +62,12 @@ export function Navigation() {
                   borderWidth: "1px",
                 }}
                 onFocus={(e) => {
-                  e.currentTarget.style.borderColor = "rgba(0, 255, 65, 0.6)";
-                  e.currentTarget.style.boxShadow = "0 0 0 2px rgba(0, 255, 65, 0.25)";
+                  e.currentTarget.style.borderColor = "rgba(0, 255, 65, 0.6)"
+                  e.currentTarget.style.boxShadow = "0 0 0 2px rgba(0, 255, 65, 0.25)"
                 }}
                 onBlur={(e) => {
-                  e.currentTarget.style.borderColor = "rgba(0, 255, 65, 0.2)";
-                  e.currentTarget.style.boxShadow = "none";
+                  e.currentTarget.style.borderColor = "rgba(0, 255, 65, 0.2)"
+                  e.currentTarget.style.boxShadow = "none"
                 }}
               />
             </div>
@@ -73,5 +80,5 @@ export function Navigation() {
         </div>
       </div>
     </nav>
-  );
+  )
 }
